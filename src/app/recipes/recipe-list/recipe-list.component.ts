@@ -10,7 +10,7 @@ export class RecipeListComponent implements OnInit {
 	recipes: Recipe[] = [];
 	@Output() recipeSelected = new EventEmitter<Recipe>();
 
-	recipe = new Recipe ('Dummy','Dummy','http://placehold.it/350x150');
+	dummyRecipe = new Recipe ('Dummy','Dummy','http://placehold.it/350x150');
   constructor() { }
 
   ngOnInit() {
