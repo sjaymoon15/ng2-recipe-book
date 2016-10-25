@@ -7,10 +7,13 @@ import { Recipe } from '../recipe';
   templateUrl: './recipe-list.component.html'
 })
 export class RecipeListComponent implements OnInit {
-	recipes: Recipe[] = [];
+	recipes: Recipe[] = [
+    new Recipe ('Dummy1','Dummy1','http://placehold.it/350x150', []),
+    new Recipe ('Dummy2','Dummy2','http://placehold.it/350x150', [])
+  ];
 	@Output() recipeSelected = new EventEmitter<Recipe>();
 
-	dummyRecipe = new Recipe ('Dummy','Dummy','http://placehold.it/350x150');
+	// dummyRecipe = new Recipe ('Dummy','Dummy','http://placehold.it/350x150');
   constructor() { }
 
   ngOnInit() {
